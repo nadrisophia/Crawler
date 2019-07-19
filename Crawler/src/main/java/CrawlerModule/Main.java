@@ -16,7 +16,6 @@ public class Main {
         System.out.println(time);
         executor.submit(new Crawler("https://monzo.com", executor, processed, "monzo.com"));
         executor.awaitTermination(60,TimeUnit.SECONDS);
-        executor.shutdownNow();
         Date time2 = new Date();
         System.out.println(time2);
         for(String s: processed){
